@@ -108,6 +108,12 @@ which will override:
 	- virtual void Draw();
 which will draw the butterflies
 
+# Project using this library
+
+	- https://github.com/lukesmolo/STD
+
+	- https://github.com/lukesmolo/MDACS
+
 
 
 
