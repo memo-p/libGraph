@@ -16,9 +16,9 @@
 */
 
 
-#include "ControlEngine.h"
+#include "ControlEngineBase.h"
 
-void ControlEngine::KeyboardCallback(unsigned char key,int x, int y){
+void ControlEngineBase::KeyboardCallback(unsigned char key,int x, int y){
     switch (key) {
         case 'p':
             exit(0);
@@ -32,31 +32,31 @@ void ControlEngine::KeyboardCallback(unsigned char key,int x, int y){
     }
 }
 
-void ControlEngine::KeyboardReleaseCallback(unsigned char key,int x, int y){
+void ControlEngineBase::KeyboardReleaseCallback(unsigned char key,int x, int y){
     
 }
-void ControlEngine::specialCallback(int key,int x, int y){
-    
-}
-
-void ControlEngine::MouseCallback(int button, int state, int x, int y){
+void ControlEngineBase::specialCallback(int key,int x, int y){
     
 }
 
-void ControlEngine::MotionCallback(int x, int y){
+void ControlEngineBase::MouseCallback(int button, int state, int x, int y){
     
 }
 
-void ControlEngine::PassiveMotionCallback(int x, int y){
+void ControlEngineBase::MotionCallback(int x, int y){
     
 }
 
-void ControlEngine::MouseEntry(int state){
+void ControlEngineBase::PassiveMotionCallback(int x, int y){
+    
+}
+
+void ControlEngineBase::MouseEntry(int state){
     
 }
 
 
-void ControlEngine::JoystickCallback(unsigned int state,
+void ControlEngineBase::JoystickCallback(unsigned int state,
                       int x, int y, int z){
     
 }

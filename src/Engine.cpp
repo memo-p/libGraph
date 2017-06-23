@@ -19,7 +19,7 @@
 
 #include "Engine.h"
 
-//ControlEngine
+//ControlEngineBase
 void KeyboardCallback(unsigned char key,int x, int y){
     Engine::crtE_->KeyboardCallback(key,x,y);
 }
@@ -65,7 +65,7 @@ void Engine::controlBoot(){
     glutEntryFunc(MouseEntry);
 }
 
-//GraphicEngine
+//GraphicEngineBase
 void display(){
     
     glMatrixMode( GL_PROJECTION ) ;
@@ -109,7 +109,7 @@ void Engine::graphicBoot(){
     glutReshapeFunc(ReshapeCallback);
 }
 
-//GameEngine
+//GameEngineBase
 void IdleCallback(void){
     Engine::gmE_->idle();
     glutPostRedisplay();
@@ -153,6 +153,6 @@ void Engine::start(){
     glutMainLoop();
 }
 
-ControlEngine * Engine::crtE_ = new ControlEngine();
-GameEngine * Engine::gmE_ = new GameEngine();
-GraphicEngine * Engine::grE_ = new GraphicEngine();
+ControlEngineBase * Engine::crtE_ = new ControlEngineBase();
+GameEngineBase * Engine::gmE_ = new GameEngineBase();
+GraphicEngineBase * Engine::grE_ = new GraphicEngineBase();

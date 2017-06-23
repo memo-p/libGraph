@@ -47,8 +47,11 @@ clean: #pas de dependance
 veryclean: clean
 	/bin/rm -f ${EXE}
 	/bin/rm -f lib/libEngine.a
+	/bin/rm -f include/*.h
     
 libUnix: ${OBJS}
 	/bin/rm -f lib/libEngine.a
 	/bin/rm -f src/main.o
 	ar -cvq lib/libEngine.a src/*.o
+	/bin/rm -f src/*.o
+	/bin/cp src/*.h include/
