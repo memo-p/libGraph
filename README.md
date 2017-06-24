@@ -15,9 +15,9 @@ Into the include directory, remove the directory GL.
 
 # Uses
 
-You will use inheritance from ControlEngine, GameEngine and GraphicEngine to override the graphic, control and game callbacks.
+You will use inheritance from ControlEngineBase, GameEngineBase and GraphicEngineBase to override the graphic, control and game callbacks.
 
-## ControlEngine
+## ControlEngineBase
 This class provides 8 methods to override for the interactions.
 
     - virtual void KeyboardCallback(unsigned char key,int x, int y);
@@ -48,14 +48,14 @@ If you need some informations about this methods and their arguments, go on the 
 	- https://www.opengl.org/resources/libraries/glut/spec3/node45.html
 
 
-# GameEngine
+# GameEngineBase
 
 This class provides only one method, but a fundamental one. The IDLE callback:
     - virtual void idle();
 
 This idle methods is called every time their is nothing to do. This method has to be overrided.
 
-# GraphicEngine
+# GraphicEngineBase
 This class provides 2 methods:
 	- virtual void Draw();
 Which has to be "override" and which contains all the GraphicPrimitives call.

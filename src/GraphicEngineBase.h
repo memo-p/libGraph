@@ -17,10 +17,16 @@
 
 #pragma once
 
+#include "GraphicPrimitives.h"
 
-class GameEngine {
-    
+class GraphicEngineBase {
     
 public:
-    virtual void idle();
+
+	GraphicEngineBase(){
+		
+    }
+    
+    virtual void Draw();
+    virtual void reshape(int width, int height);
 };

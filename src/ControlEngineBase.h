@@ -15,12 +15,27 @@
  * along with this program; If not, see <http://www.gnu.org/licenses/>.
 */
 
+#pragma once
+#include <iostream>
+#include "libGraphicInclude.h"
 
-#include "GraphicEngine.h"
-
-
-
-void GraphicEngine::Draw(){
-}
-void GraphicEngine::reshape(int width, int height){}
-
+class ControlEngineBase {
+    
+public:
+    virtual void KeyboardCallback(unsigned char key,int x, int y);
+    
+    virtual void KeyboardReleaseCallback(unsigned char key,int x, int y);
+    
+    virtual void specialCallback(int key,int x, int y);
+    
+    virtual void MouseCallback(int button, int state, int x, int y);
+    
+    virtual void MotionCallback(int x, int y);
+    
+    virtual void PassiveMotionCallback(int x, int y);
+    
+    virtual void MouseEntry(int state);
+    
+    virtual void JoystickCallback(unsigned int buttonMask,
+                          int x, int y, int z);
+};

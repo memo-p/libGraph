@@ -15,18 +15,12 @@
  * along with this program; If not, see <http://www.gnu.org/licenses/>.
 */
 
-#pragma once
 
-#include "GraphicPrimitives.h"
+#include "GraphicEngineBase.h"
 
-class GraphicEngine {    
-    
-public:
 
-	GraphicEngine(){
-		
-    }
-    
-    virtual void Draw();
-    virtual void reshape(int width, int height);
-};
+
+void GraphicEngineBase::Draw(){
+}
+void GraphicEngineBase::reshape(int width, int height){}
+
